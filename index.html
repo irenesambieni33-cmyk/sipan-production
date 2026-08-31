@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SIPAN PRODUCTION — agriculture, élevage, produits et équipements d'élevage au Bénin.">
+  <meta name="theme-color" content="#0f6b45">
+  <title>SIPAN PRODUCTION | Agriculture & Élevage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header" id="top">
+  <div class="container nav">
+    <a class="brand" href="#top" aria-label="SIPAN PRODUCTION">
+      <span class="brand-mark">SP</span><span>SIPAN <b>PRODUCTION</b></span>
+    </a>
+    <button class="menu-btn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+    <nav class="nav-links">
+      <a href="#activites">Activités</a><a href="#boutique">Boutique</a><a href="#apropos">À propos</a>
+      <a href="#livraison">Livraison</a><a href="#blog">Conseils</a><a href="#contact">Contact</a>
+      <button class="cart-btn" id="cartOpen">Panier <span id="cartCount">0</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="eyebrow light">AGRICULTURE • ÉLEVAGE • COMMERCE</p>
+    <h1>L’excellence au service de <em>l’agriculture et de l’élevage.</em></h1>
+    <p class="hero-text">SIPAN PRODUCTION développe des solutions fiables pour produire, approvisionner et faire grandir les activités agricoles et d’élevage au Bénin.</p>
+    <div class="hero-actions"><a class="btn primary" href="#activites">Découvrir nos activités</a><a class="btn ghost" href="#boutique">Voir nos produits</a></div>
+    <div class="hero-trust"><span>✓ Qualité</span><span>✓ Fiabilité</span><span>✓ Proximité</span></div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+    <div><strong>—</strong><span>Produits disponibles</span></div>
+    <div><strong>—</strong><span>Clients servis</span></div>
+    <div><strong>—</strong><span>Zones desservies</span></div>
+    <div><strong>—</strong><span>Années d’expérience</span></div>
+  </div>
+  <p class="placeholder-note">Les indicateurs seront remplacés par les données réelles de SIPAN PRODUCTION.</p>
+</section>
+
+<section class="section" id="apropos">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">NOTRE APPROCHE</p>
+      <h2>Construire une agriculture plus <span>professionnelle.</span></h2>
+      <p>Notre ambition est de rapprocher production, élevage, approvisionnement et services afin de proposer une expérience simple et fiable aux éleveurs, agriculteurs et professionnels.</p>
+      <p>Nous plaçons la qualité, la transparence et la proximité au cœur de chaque activité.</p>
+      <a class="text-link" href="#contact">Découvrir SIPAN PRODUCTION →</a>
+    </div>
+    <div class="image-card about-img"><div class="image-caption">Produire. Approvisionner. Développer.</div></div>
+  </div>
+</section>
+
+<section class="section soft" id="activites">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">NOS ACTIVITÉS</p><h2>Une chaîne de valeur pensée pour <span>grandir.</span></h2></div><p>Des activités complémentaires pour répondre aux besoins du monde agricole et de l’élevage.</p></div>
+    <div class="activity-grid">
+      <article class="activity"><div class="activity-img img-cattle"></div><div class="card-body"><small>01</small><h3>Production animale</h3><p>Production et développement d’activités d’élevage avec une approche orientée qualité.</p><a href="#contact">En savoir plus →</a></div></article>
+      <article class="activity"><div class="activity-img img-poultry"></div><div class="card-body"><small>02</small><h3>Élevage</h3><p>Solutions et activités autour des principales espèces d’élevage.</p><a href="#contact">En savoir plus →</a></div></article>
+      <article class="activity"><div class="activity-img img-farm"></div><div class="card-body"><small>03</small><h3>Agriculture</h3><p>Production et valorisation des ressources agricoles.</p><a href="#contact">En savoir plus →</a></div></article>
+      <article class="activity"><div class="activity-img img-feed"></div><div class="card-body"><small>04</small><h3>Produits d’élevage</h3><p>Commercialisation de produits destinés aux éleveurs et exploitations.</p><a href="#boutique">Voir la boutique →</a></div></article>
+      <article class="activity"><div class="activity-img img-equipment"></div><div class="card-body"><small>05</small><h3>Équipements</h3><p>Fourniture de matériels et équipements pour les activités d’élevage.</p><a href="#boutique">Voir les produits →</a></div></article>
+      <article class="activity"><div class="activity-img img-truck"></div><div class="card-body"><small>06</small><h3>Transport & livraison</h3><p>Acheminement des produits selon les possibilités et zones desservies.</p><a href="#livraison">Organiser une livraison →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="boutique">
+  <div class="container">
+    <div class="section-head"><div><p class="eyebrow">BOUTIQUE</p><h2>Les essentiels pour vos <span>activités.</span></h2></div><button class="btn outline" id="viewAll">Voir tout</button></div>
+    <div class="shop-toolbar"><div class="search"><span>⌕</span><input id="search" placeholder="Rechercher un produit…"></div><select id="category"><option value="all">Toutes les catégories</option><option value="aliments">Aliments</option><option value="equipements">Équipements</option><option value="agricoles">Produits agricoles</option></select></div>
+    <div class="product-grid" id="products"></div>
+  </div>
+</section>
+
+<section class="section dark" id="livraison">
+  <div class="container split delivery">
+    <div><p class="eyebrow light">TRANSPORT & LIVRAISON</p><h2>Du produit à votre exploitation, <em>simplement.</em></h2><p>Nous préparons une expérience de livraison adaptée au contexte local. Les zones, délais et conditions sont confirmés selon chaque demande.</p><a class="btn primary" href="#contact">Demander une livraison</a></div>
+    <div class="process"><div><b>01</b><span>Demande</span></div><div><b>02</b><span>Confirmation</span></div><div><b>03</b><span>Préparation</span></div><div><b>04</b><span>Livraison</span></div></div>
+  </div>
+</section>
+
+<section class="section" id="blog">
+  <div class="container"><div class="section-head"><div><p class="eyebrow">CENTRE DE CONNAISSANCES</p><h2>Des contenus utiles pour <span>progresser.</span></h2></div></div>
+    <div class="articles">
+      <article><div class="article-img a1"></div><p class="tag">ÉLEVAGE</p><h3>Les bases d’un élevage bien organisé</h3><p>Organisation, observation et suivi : les réflexes essentiels.</p><a href="#contact">Lire l’article →</a></article>
+      <article><div class="article-img a2"></div><p class="tag">ALIMENTATION</p><h3>Pourquoi la régularité compte dans l’alimentation</h3><p>Quelques principes simples pour mieux piloter l’alimentation.</p><a href="#contact">Lire l’article →</a></article>
+      <article><div class="article-img a3"></div><p class="tag">AGRICULTURE</p><h3>Penser son exploitation comme une entreprise</h3><p>Objectifs, coûts et suivi : passer d’une activité à une stratégie.</p><a href="#contact">Lire l’article →</a></article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section">
+  <div class="container cta"><div><p class="eyebrow light">UN BESOIN SPÉCIFIQUE ?</p><h2>Parlons de votre projet.</h2></div><a class="btn white" href="#contact">Demander un devis →</a></div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="container split">
+    <div><p class="eyebrow">CONTACT</p><h2>Construisons la suite <span>ensemble.</span></h2><p>Les coordonnées réelles seront ajoutées dès qu’elles seront validées.</p>
+      <div class="contact-list"><div><b>Téléphone</b><span>[NUMÉRO À RENSEIGNER]</span></div><div><b>Email</b><span>[EMAIL À RENSEIGNER]</span></div><div><b>WhatsApp</b><span>[NUMÉRO WHATSAPP À RENSEIGNER]</span></div><div><b>Localisation</b><span>[VILLE / ADRESSE À RENSEIGNER]</span></div></div>
+    </div>
+    <form class="form" id="contactForm"><label>Nom<input required name="name" placeholder="Votre nom"></label><label>Téléphone<input required name="phone" placeholder="+229 …"></label><label>Email<input type="email" name="email" placeholder="vous@exemple.com"></label><label>Votre demande<textarea required name="message" rows="5" placeholder="Expliquez-nous votre besoin…"></textarea></label><button class="btn primary" type="submit">Envoyer la demande</button><p class="form-status" id="formStatus"></p></form>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark">SP</span><span>SIPAN <b>PRODUCTION</b></span></a><p>L’agriculture et l’élevage pensés pour durer.</p></div><div><h4>Navigation</h4><a href="#apropos">À propos</a><a href="#activites">Activités</a><a href="#boutique">Boutique</a><a href="#blog">Conseils</a></div><div><h4>Services</h4><a href="#livraison">Livraison</a><a href="#contact">Demander un devis</a><a href="#contact">Contact</a></div><div><h4>Informations</h4><a href="#">Confidentialité</a><a href="#">Conditions générales</a><a href="#">Mentions légales</a></div></div><div class="container copyright">© 2026 SIPAN PRODUCTION. Tous droits réservés.</div></footer>
+
+<aside class="cart" id="cart" aria-hidden="true"><div class="cart-head"><h2>Votre panier</h2><button id="cartClose">×</button></div><div id="cartItems" class="cart-items"></div><div class="cart-total"><span>Total</span><strong id="cartTotal">0 FCFA</strong></div><button class="btn primary full" id="checkout">Commander</button></aside>
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
