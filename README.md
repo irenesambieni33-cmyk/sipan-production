@@ -3,7 +3,7 @@
 Version complète frontend du site officiel.
 
 ## Coordonnées intégrées
-- Téléphone : +229 01 90 96 06 97
+- Téléphone : +229 01 90 96 06 98
 - WhatsApp : +229 01 47 54 47 02
 - Localisation : Abomey-Calavi, Bénin
 - Email : sipanproduction@gmail.com
