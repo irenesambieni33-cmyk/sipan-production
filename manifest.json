@@ -1,0 +1,12 @@
+{
+  "name": "SIPAN PRODUCTION",
+  "short_name": "SIPAN",
+  "description": "Agriculture, élevage, produits et équipements au Bénin.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d6b45",
+  "orientation": "portrait",
+  "lang": "fr",
+  "icons": []
+}
