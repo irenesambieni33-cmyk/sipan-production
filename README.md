@@ -1,36 +1,11 @@
-# SIPAN PRODUCTION — Site premium
+# SIPAN PRODUCTION
 
-Prototype frontend responsive livré en HTML/CSS/JavaScript.
+Version complète frontend du site officiel.
 
-## Lancer
-Ouvrir `index.html` dans un navigateur, ou servir le dossier avec un serveur statique.
+## Coordonnées intégrées
+- Téléphone : +229 01 90 96 06 97
+- WhatsApp : +229 01 47 54 47 02
+- Localisation : Abomey-Calavi, Bénin
+- Email : sipanproduction@gmail.com
 
-## Fonctionnalités déjà présentes
-- Homepage premium responsive
-- Navigation mobile
-- Section activités
-- Boutique avec recherche et filtre
-- Panier persistant avec localStorage
-- Gestion des quantités
-- Formulaire de contact
-- Parcours de commande en mode démonstration
-- SEO de base
-- Design system cohérent
-
-## À connecter avant mise en production
-Les informations entre crochets sont des placeholders et doivent être remplacées par les données réelles.
-- numéro de téléphone
-- WhatsApp
-- email
-- adresse/localisation
-- statistiques
-- catalogue réel et stocks
-- backend/API
-- base PostgreSQL
-- authentification
-- paiement
-- gestion administrative
-- livraison
-- politique juridique validée
-
-Les images actuelles sont chargées depuis Unsplash pour le prototype. Pour une mise en production, remplacer par les photographies autorisées de SIPAN PRODUCTION et optimiser en WebP/AVIF.
+Les produits et prix présents sont des données de démonstration et doivent être remplacés par les données commerciales réelles avant mise en production.

@@ -1,10 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://example.com/</loc></url>
-<url><loc>https://example.com/#activites</loc></url>
-<url><loc>https://example.com/#boutique</loc></url>
-<url><loc>https://example.com/#apropos</loc></url>
-<url><loc>https://example.com/#livraison</loc></url>
-<url><loc>https://example.com/#blog</loc></url>
-<url><loc>https://example.com/#contact</loc></url>
+<url><loc>https://sipan-production-xk6v.vercel.app/</loc></url>
 </urlset>

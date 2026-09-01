@@ -1,32 +1,41 @@
 const products=[
- {id:1,name:"Aliment volaille",cat:"aliments",price:15000,img:"https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&w=700&q=80"},
- {id:2,name:"Abreuvoir d’élevage",cat:"equipements",price:4500,img:"https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80"},
- {id:3,name:"Semences agricoles",cat:"agricoles",price:5000,img:"https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=700&q=80"},
- {id:4,name:"Mangeoire",cat:"equipements",price:6500,img:"https://images.unsplash.com/photo-1534482421-64566f976cfa?auto=format&fit=crop&w=700&q=80"}
-];
-let cart=JSON.parse(localStorage.getItem("sipan_cart")||"[]");
+{id:1,name:"Aliment pour volailles",category:"Aliments",price:15000,unit:"sac",emoji:"🌾"},
+{id:2,name:"Abreuvoir pour élevage",category:"Équipements",price:3500,unit:"pièce",emoji:"💧"},
+{id:3,name:"Matériel d’élevage",category:"Équipements",price:12000,unit:"pièce",emoji:"⚙️"},
+{id:4,name:"Produit agricole",category:"Produits agricoles",price:8000,unit:"unité",emoji:"🌱"},
+{id:5,name:"Accessoire d’élevage",category:"Accessoires",price:5000,unit:"pièce",emoji:"🧰"},
+{id:6,name:"Équipement avicole",category:"Équipements",price:18000,unit:"pièce",emoji:"🐔"}];
+let cart=JSON.parse(localStorage.getItem("sipanCart")||"[]");
 const money=n=>new Intl.NumberFormat("fr-FR").format(n)+" FCFA";
+function toggleMenu(){document.getElementById("nav").classList.toggle("open")}
 function renderProducts(){
- const q=document.querySelector("#search").value.toLowerCase(), c=document.querySelector("#category").value;
- const list=products.filter(p=>(c==="all"||p.cat===c)&&p.name.toLowerCase().includes(q));
- document.querySelector("#products").innerHTML=list.map(p=>`<article class="product"><div class="product-img" style="background-image:url('${p.img}')"></div><div class="product-body"><div class="product-cat">${p.cat}</div><h3>${p.name}</h3><div class="price">${money(p.price)}</div><button onclick="addToCart(${p.id})">Ajouter au panier</button></div></article>`).join("")||"<p>Aucun produit trouvé.</p>";
+ const q=document.getElementById("search").value.toLowerCase(), c=document.getElementById("category").value;
+ const list=products.filter(p=>(!q||p.name.toLowerCase().includes(q))&&(!c||p.category===c));
+ document.getElementById("products").innerHTML=list.map(p=>`<article class="product"><div class="product-visual">${p.emoji}</div><div class="product-body"><span class="badge">${p.category}</span><h3>${p.name}</h3><div class="price">${money(p.price)} / ${p.unit}</div><button onclick="addToCart(${p.id})">Ajouter au panier</button></div></article>`).join("")||"<p>Aucun produit trouvé.</p>";
 }
-function addToCart(id){const p=products.find(x=>x.id===id), item=cart.find(x=>x.id===id);item?item.qty++:cart.push({...p,qty:1});save();toast("Produit ajouté au panier");openCart()}
-function save(){localStorage.setItem("sipan_cart",JSON.stringify(cart));renderCart()}
+function save(){localStorage.setItem("sipanCart",JSON.stringify(cart));updateCount()}
+function updateCount(){document.getElementById("count").textContent=cart.reduce((s,x)=>s+x.qty,0)}
+function addToCart(id){let x=cart.find(a=>a.id===id);if(x)x.qty++;else cart.push({id,qty:1});save();openCart()}
+function openCart(){document.getElementById("cart").classList.add("show");renderCart()}
+function closeCart(){document.getElementById("cart").classList.remove("show")}
 function renderCart(){
- document.querySelector("#cartCount").textContent=cart.reduce((s,x)=>s+x.qty,0);
- const box=document.querySelector("#cartItems");
- box.innerHTML=cart.length?cart.map(x=>`<div class="cart-row"><div><h4>${x.name}</h4><small>${money(x.price)} × ${x.qty}</small></div><div class="qty"><button onclick="changeQty(${x.id},-1)">−</button><b>${x.qty}</b><button onclick="changeQty(${x.id},1)">+</button></div></div>`).join(""):"<p style='color:#65736d'>Votre panier est vide.</p>";
- document.querySelector("#cartTotal").textContent=money(cart.reduce((s,x)=>s+x.price*x.qty,0));
+ const box=document.getElementById("cartItems");
+ if(!cart.length){box.innerHTML="<p>Votre panier est vide.</p>";document.getElementById("total").textContent="0 FCFA";return}
+ let total=0;
+ box.innerHTML=cart.map(x=>{const p=products.find(a=>a.id===x.id);total+=p.price*x.qty;return `<div class="cart-row"><span>${p.name}<br><small>${x.qty} × ${money(p.price)}</small></span><span><button onclick="changeQty(${p.id},1)">+</button> <button onclick="changeQty(${p.id},-1)">−</button></span></div>`}).join("");
+ document.getElementById("total").textContent=money(total);
 }
-function changeQty(id,d){const x=cart.find(i=>i.id===id);if(!x)return;x.qty+=d;if(x.qty<=0)cart=cart.filter(i=>i.id!==id);save()}
-function openCart(){document.querySelector("#cart").classList.add("open");document.querySelector("#cart").setAttribute("aria-hidden","false")}
-function closeCart(){document.querySelector("#cart").classList.remove("open");document.querySelector("#cart").setAttribute("aria-hidden","true")}
-function toast(t){const x=document.querySelector("#toast");x.textContent=t;x.classList.add("show");setTimeout(()=>x.classList.remove("show"),2200)}
-document.querySelector("#search").addEventListener("input",renderProducts);document.querySelector("#category").addEventListener("change",renderProducts);
-document.querySelector("#cartOpen").onclick=openCart;document.querySelector("#cartClose").onclick=closeCart;
-document.querySelector(".menu-btn").onclick=()=>{const n=document.querySelector(".nav-links");n.classList.toggle("open");document.querySelector(".menu-btn").setAttribute("aria-expanded",n.classList.contains("open"))};
-document.querySelectorAll(".nav-links a").forEach(a=>a.onclick=()=>document.querySelector(".nav-links").classList.remove("open"));
-document.querySelector("#checkout").onclick=()=>cart.length?toast("Commande enregistrée en mode démonstration. Connectez le backend pour la traiter."):toast("Votre panier est vide.");
-document.querySelector("#contactForm").onsubmit=e=>{e.preventDefault();document.querySelector("#formStatus").textContent="Votre demande a bien été enregistrée en mode démonstration.";toast("Demande envoyée");e.target.reset()};
-renderProducts();renderCart();
+function changeQty(id,d){let x=cart.find(a=>a.id===id);x.qty+=d;if(x.qty<=0)cart=cart.filter(a=>a.id!==id);save();renderCart()}
+function checkoutWhatsApp(){
+ if(!cart.length)return alert("Votre panier est vide.");
+ const lines=cart.map(x=>{const p=products.find(a=>a.id===x.id);return `- ${p.name} x${x.qty}`}).join("\n");
+ const msg=`Bonjour SIPAN PRODUCTION,\nJe souhaite passer une commande :\n${lines}\n\nMerci de me contacter pour confirmer la disponibilité, le prix et la livraison.`;
+ window.open("https://wa.me/2290147544702?text="+encodeURIComponent(msg),"_blank");
+}
+function sendContact(e){
+ e.preventDefault();
+ const msg=`Bonjour SIPAN PRODUCTION,\nNom : ${name.value}\nTéléphone : ${phone.value}\nEmail : ${email.value}\nDemande : ${message.value}`;
+ window.open("https://wa.me/2290147544702?text="+encodeURIComponent(msg),"_blank");
+}
+document.getElementById("cart").addEventListener("click",e=>{if(e.target.id==="cart")closeCart()});
+renderProducts();updateCount();
