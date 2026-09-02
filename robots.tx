@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sipan-production-xk6v.vercel.app/sitemap.xml
