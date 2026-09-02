@@ -33,7 +33,7 @@
         >
         <span>AGRO<b>TRIA</b></span>
       </a>
-
+ 
       <button
         class="menu-toggle"
         aria-label="Ouvrir le menu"
