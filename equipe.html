@@ -20,7 +20,10 @@
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =========================
+       HEADER
+  ========================== -->
+
   <header class="site-header">
 
     <div class="container nav-container">
@@ -31,13 +34,20 @@
           alt="Logo AGROTRIA"
           class="logo-image"
         >
+
         <span>AGRO<b>TRIA</b></span>
       </a>
 
-      <button class="menu-toggle" aria-label="Ouvrir le menu">
+      <!-- BOUTON MENU MOBILE -->
+      <button
+        class="menu"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+      >
         ☰
       </button>
 
+      <!-- NAVIGATION -->
       <nav class="main-nav">
 
         <a href="index.html">
@@ -75,10 +85,14 @@
   </header>
 
 
-  <!-- CONTENU -->
+  <!-- =========================
+       CONTENU PRINCIPAL
+  ========================== -->
+
   <main>
 
     <!-- HERO -->
+
     <section class="page-hero">
 
       <div class="container">
@@ -101,6 +115,7 @@
 
 
     <!-- INTRODUCTION -->
+
     <section class="section">
 
       <div class="container">
@@ -116,18 +131,22 @@
           </h2>
 
           <p>
-            AGROTRIA repose sur la complémentarité de trois
+            AGROTRIA repose sur la complémentarité de plusieurs
             domaines d'expertise qui constituent le cœur du projet.
           </p>
 
         </div>
 
 
-        <!-- EQUIPE -->
+        <!-- =========================
+             ÉQUIPE
+        ========================== -->
+
         <div class="team-grid">
 
 
-          <!-- IRÉNÉ -->
+          <!-- COFONDATEUR 1 -->
+
           <article class="team-card">
 
             <div class="team-avatar">
@@ -145,16 +164,182 @@
               </h2>
 
               <h3>
-                Production & Santé animale
+                Production &amp; Santé animale
               </h3>
 
               <p>
-                Responsable du pôle Production & Santé animale,
+                Responsable du pôle Production &amp; Santé animale,
                 avec une orientation vers la production d'animaux
                 destinés à la consommation humaine et le suivi
                 de leur santé.
               </p>
 
               <div class="team-tags">
+                <span>Élevage</span>
+                <span>Santé animale</span>
+                <span>Production</span>
+              </div>
 
-                <span>
+            </div>
+
+          </article>
+
+
+          <!-- COFONDATEUR 2 -->
+
+          <article class="team-card">
+
+            <div class="team-avatar">
+              CO2
+            </div>
+
+            <div class="team-content">
+
+              <span class="team-role">
+                CO-FONDATEUR
+              </span>
+
+              <h2>
+                À compléter
+              </h2>
+
+              <h3>
+                Pêche &amp; Aquaculture
+              </h3>
+
+              <p>
+                Responsable du pôle Pêche &amp; Aquaculture,
+                consacré au développement des activités liées
+                aux ressources halieutiques et à la production
+                aquacole.
+              </p>
+
+              <div class="team-tags">
+                <span>Pêche</span>
+                <span>Aquaculture</span>
+                <span>Production</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- COFONDATEUR 3 -->
+
+          <article class="team-card">
+
+            <div class="team-avatar">
+              CO3
+            </div>
+
+            <div class="team-content">
+
+              <span class="team-role">
+                CO-FONDATEUR
+              </span>
+
+              <h2>
+                À compléter
+              </h2>
+
+              <h3>
+                Production végétale
+              </h3>
+
+              <p>
+                Responsable du pôle Production végétale,
+                consacré au développement des cultures et à la
+                valorisation des productions agricoles.
+              </p>
+
+              <div class="team-tags">
+                <span>Agriculture</span>
+                <span>Cultures</span>
+                <span>Production végétale</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         VISION
+    ========================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="section-heading center">
+
+          <span class="section-tag">
+            NOTRE VISION
+          </span>
+
+          <h2>
+            Construire une agriculture plus forte
+          </h2>
+
+          <p>
+            AGROTRIA rassemble les compétences nécessaires pour
+            créer une approche intégrée de la production,
+            de la transformation, de la commercialisation et
+            de la distribution des produits agricoles.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-content">
+
+        <div>
+          <h3>AGROTRIA</h3>
+
+          <p>
+            Trois expertises. Une vision agricole.
+          </p>
+        </div>
+
+        <div>
+          <p>
+            © <span class="current-year"></span> AGROTRIA.
+            Tous droits réservés.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- SCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
