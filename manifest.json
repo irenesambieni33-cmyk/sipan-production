@@ -1,6 +1,6 @@
 {
-  "name": "SIPAN PRODUCTION",
-  "short_name": "SIPAN",
+  "name": "AGROTRIA",
+  "short_name": "AGROTRIA",
   "description": "Agriculture, élevage, produits et équipements au Bénin.",
   "start_url": "./",
   "display": "standalone",
